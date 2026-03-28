@@ -25,5 +25,5 @@ The Terraform files in this folder use the template in that foundry-samples
 repository.
 
 In summary, see [`Makefile`](Makefile) for commands in sequence and set
-`ARM_SUBSCRIPTION_ID="YOUR_SUBSCRIPTION_ID"` in shell and variables in the `.tf`
+`TF_VAR_subscription_id="YOUR_SUBSCRIPTION_ID"` in shell and variables in the `.tf`
 files.

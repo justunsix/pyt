@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#MISE description="Format and Validate Terraform files and Plan"
+
+# Format and validate Terraform files
+terraform fmt
+terraform validate
+## Plan Terraform deployment and output plan
+terraform plan -out=tfplan
