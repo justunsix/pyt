@@ -1,12 +1,11 @@
 ## Create a random string
 ## 
 resource "random_string" "unique" {
-  length      = 5
-  min_numeric = 5
-  numeric     = true
-  special     = false
-  lower       = true
-  upper       = false
+  length  = 8
+  numeric = true
+  special = false
+  lower   = true
+  upper   = false
 }
 
 ## Create a resource group for the resources to be stored in
@@ -18,7 +17,6 @@ resource "azurerm_resource_group" "rg" {
 
 ## Create an AI Foundry resource
 ##
-
 resource "azurerm_cognitive_account" "ai_foundry" {
   name                = "aifoundry${random_string.unique.result}"
   location            = var.location
@@ -35,13 +33,13 @@ resource "azurerm_cognitive_account" "ai_foundry" {
   custom_subdomain_name      = "aifoundry${random_string.unique.result}"
   project_management_enabled = true
 
-  tags = {
-    Acceptance = "Test"
-  }
+  tags = merge(var.tags, {
+    Environment = var.environment
+  })
 }
 
 # Create a Foundry project (folder for organizing stateful work)
-resource "azurerm_cognitive_account_project" "example" {
+resource "azurerm_cognitive_account_project" "project_primary" {
   name                 = "myproject"
   cognitive_account_id = azurerm_cognitive_account.ai_foundry.id
   location             = azurerm_resource_group.rg.location
@@ -69,7 +67,7 @@ resource "azurerm_cognitive_deployment" "aifoundry_deployment_gpt_4_1" {
   model {
     format  = "OpenAI"
     name    = "gpt-4.1"
-    version = "2025-04-14"
+    version = var.model_version
   }
 }
 
