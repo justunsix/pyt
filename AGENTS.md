@@ -5,7 +5,7 @@
 ---
 
 This guide is for code generation, testing, linting, and maintenance by agentic
-systems and developer agents working within `automatetheboringstuff-py-tests`.
+systems and developer agents working within `pyt`.
 It has whole codebase and per project rules for command usage, code style,
 structure, and best practices.
 
