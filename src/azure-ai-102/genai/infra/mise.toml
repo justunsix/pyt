@@ -2,6 +2,7 @@
 TF_VAR_subscription_id = { required = "Set Azure subscription id, for example in mise.local.toml" }
 
 [tasks.azlogin]
+description = "Log into Azure CLI"
 run = [
   'az config set core.login_experience_v2=off',
   'az login',
