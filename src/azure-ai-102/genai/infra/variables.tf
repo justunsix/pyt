@@ -4,5 +4,8 @@ variable "location" {
 }
 
 variable "subscription_id" {
-  type = string
+  description = "ID of Azure subscription to deploy resources to"
+  type        = string
+  sensitive   = true
 }
+
