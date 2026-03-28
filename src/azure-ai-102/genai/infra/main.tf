@@ -32,7 +32,7 @@ resource "azurerm_cognitive_account" "ai_foundry" {
   sku_name = "S0"
 
   # required for stateful development in Foundry including agent service
-  custom_subdomain_name = "aifoundry${random_string.unique.result}"
+  custom_subdomain_name      = "aifoundry${random_string.unique.result}"
   project_management_enabled = true
 
   tags = {
@@ -44,7 +44,7 @@ resource "azurerm_cognitive_account" "ai_foundry" {
 resource "azurerm_cognitive_account_project" "example" {
   name                 = "myproject"
   cognitive_account_id = azurerm_cognitive_account.ai_foundry.id
-  location             = azurerm_resource_group.rg.location 
+  location             = azurerm_resource_group.rg.location
 
   identity {
     type = "SystemAssigned"
@@ -53,12 +53,12 @@ resource "azurerm_cognitive_account_project" "example" {
 
 ## Create a deployment for OpenAI's GPT-4o in the AI Foundry resource
 ##
-resource "azurerm_cognitive_deployment" "aifoundry_deployment_gpt_4o" {
+resource "azurerm_cognitive_deployment" "aifoundry_deployment_gpt_4_1" {
   depends_on = [
     azurerm_cognitive_account.ai_foundry
   ]
 
-  name                 = "gpt-4o"
+  name                 = "gpt-4.1"
   cognitive_account_id = azurerm_cognitive_account.ai_foundry.id
 
   sku {
@@ -68,7 +68,8 @@ resource "azurerm_cognitive_deployment" "aifoundry_deployment_gpt_4o" {
 
   model {
     format  = "OpenAI"
-    name    = "gpt-4o"
-    version = "2024-11-20"
+    name    = "gpt-4.1"
+    version = "2025-04-14"
   }
 }
+
