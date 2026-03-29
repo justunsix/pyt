@@ -2,4 +2,4 @@
 requests
 # Translate Headers
 beautifulsoup4
-googletrans==4.0.0-rc1
+googletrans==4.0.2
