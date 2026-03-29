@@ -1,0 +1,1 @@
+Follow the coding conventions in AGENTS.md at the repository root.

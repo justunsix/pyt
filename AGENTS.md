@@ -23,6 +23,10 @@ structure, and best practices.
   the appropriate `requirements.txt` or `pyproject.toml` as needed
   or simply use `uv run`. Example:
 
+### Other Tools
+
+All tools required will be on the path or installed with `mise use <tool>`
+
 ### Running Scripts
 
 If `pyproject.toml` is present, use `uv run` to install deps and execute:
@@ -31,7 +35,9 @@ If `pyproject.toml` is present, use `uv run` to install deps and execute:
 uv run <script>.py
 ```
 
-For legacy projects with `requirements.txt`:
+Using `uv` is the preferred approach.
+
+For older projects in the repository with `requirements.txt`:
 
 ```sh
 python -m venv ./venv
