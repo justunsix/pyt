@@ -6,6 +6,33 @@
 version: 2
 updates:
   - package-ecosystem: "pip" # See documentation for possible values
-    directory: "/src" # Location of package manifests
+    directories:
+      - "/src/azure-ai-102/genai"
+      - "/src/azure-dp-100"
+      - "/src/project/ai-open-webui"
+      - "/src/project/ai-rag-llm"
+      - "/src/project/ai-whisper"
+      - "/src/project/automation-gpt"
+      - "/src/project/csv"
+      - "/src/project/data-science"
+      - "/src/project/diagrams"
+      - "/src/project/kubernetes/network-tests"
+      - "/src/project/makefile-to-mprocs"
+      - "/src/project/spreadsheet"
+      - "/src/project/spreadsheet/google-ads-report"
+      - "/src/project/spreadsheet/text-to-speech"
     schedule:
       interval: "monthly"
+
+  - package-ecosystem: "terraform"
+    directories:
+      - "/src/azure-ai-102/IAC"
+      - "/src/azure-ai-102/genai/infra"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "dependencies"
+      - "terraform"
+    commit-message:
+      prefix: "deps"
+
