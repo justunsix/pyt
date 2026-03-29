@@ -23,6 +23,11 @@ updates:
       - "/src/project/spreadsheet/text-to-speech"
     schedule:
       interval: "monthly"
+    labels:
+      - "dependencies"
+      - "python"
+    commit-message:
+      prefix: "deps"
 
   - package-ecosystem: "terraform"
     directories:
