@@ -14,7 +14,7 @@ az-login: ## Login to Azure
 	## Required otherwise Terraform plan can generate errors like "marshaling: string field contains invalid UTF-8"
 	## Choose subscription: <subscription_id>
 	az login
-	az account set --subscription $(ARM_SUBSCRIPTION_ID)
+	az account set --subscription $$TF_VAR_subscription_id
 
 tf-format-and-validate: ## Format and validate Terraform files
 	# Format the terraform files
