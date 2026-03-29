@@ -11,8 +11,7 @@ tf-init: ## Initialize Terraform project
 	terraform init -upgrade
 
 az-login: ## Login to Azure
-	## Required otherwise Terraform plan can generate errors like "marshaling: string field contains invalid UTF-8"
-	## Choose subscription: <subscription_id>
+	az config set core.login_experience_v2=off
 	az login
 	az account set --subscription $$TF_VAR_subscription_id
 
