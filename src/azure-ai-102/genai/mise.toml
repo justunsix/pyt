@@ -1,7 +1,5 @@
 [env]
 TF_VAR_subscription_id = { required = "Set Azure subscription id, for example in mise.local.toml" }
-AZURE_OPENAI_ENDPOINT = "your_azure_openai_endpoint"
-MODEL_DEPLOYMENT = "gpt-4.1"
 
 [tasks."azure:login"]
 description = "Log into Azure CLI"

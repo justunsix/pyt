@@ -29,6 +29,20 @@ Login-Notification:
 	uv run chat-app.py
 
 .ONESHELL:
+02a-chat-app-foundry-run: Login-Notification ## Login and Run chat application 
+	az login
+	cd ./genai/mslearn-ai-foundry/labfiles/foundry-chat/python/chat-app/
+	env | rg -i azure
+	uv run chat-app.py
+
+.ONESHELL:
+02a-chat-async-foundry-run: Login-Notification ## Login and Run chat application 
+	az login
+	cd ./genai/mslearn-ai-foundry/labfiles/foundry-chat/python/chat-app/
+	env | rg -i azure
+	uv run chat-async.py
+
+.ONESHELL:
 02b-genai-rag-app-login-run: Login-Notification ## Login and Run Retrieval Augmented Generation RAG application
 	az login
 	cd ./genai/mslearn-ai-foundry/labfiles/rag-app/python/
