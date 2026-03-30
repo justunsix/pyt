@@ -3,7 +3,7 @@ TF_VAR_subscription_id = { required = "Set Azure subscription id, for example in
 AZURE_OPENAI_ENDPOINT = "your_azure_openai_endpoint"
 MODEL_DEPLOYMENT = "gpt-4.1"
 
-[tasks.azlogin]
+[tasks."azure:login"]
 description = "Log into Azure CLI"
 run = [
   'az config set core.login_experience_v2=off',
@@ -11,48 +11,30 @@ run = [
   'az account set --subscription "$TF_VAR_subscription_id"',
 ]
 
-[tasks.tf-build]
+[tasks."terraform:fmt-validate-plan"]
 description = "Format and Validate Terraform files and Plan"
 run = [
-  'cd infra',
-  'terraform fmt',
-  'terraform validate',
-  'terraform plan -out=tfplan',
+  'terraform -chdir=infra fmt',
+  'terraform -chdir=infra validate',
+  'terraform -chdir=infra plan -out=tfplan',
 ]
 
-[tasks.tf-init]
+[tasks."terraform:init"]
 description = "Initialize Terraform"
-run = [
-  'terraform init',
-  'terraform init -upgrade',
-]
-dir = "infra"
+run = ['terraform -chdir=infra init', 'terraform -chdir=infra init -upgrade']
 
-[tasks.tf-apply]
+[tasks."terraform:apply"]
 description = "Apply infrastructure configuration"
-depends = ['build']
-run = [
-  'terraform apply tfplan',
-]
-dir = "infra"
+run = ['terraform -chdir=infra apply tfplan']
 
-[tasks.tf-state]
+[tasks."terraform:state"]
 description = "See state file and resources"
-run = [
-  'terraform state list',
-]
-dir = "infra"
+run = ['terraform -chdir=infra state list']
 
-[tasks.tf-show]
+[tasks."terraform:show"]
 description = "See state"
-run = [
-  'terraform show',
-]
-dir = "infra"
+run = ['terraform -chdir=infra show']
 
-[tasks.tf-destroy]
+[tasks."terraform:destroy"]
 description = "Destroy infrastructure"
-run = [
-  'terraform destroy',
-]
-dir = "infra"
+run = ['terraform =chdir=infra destroy']
