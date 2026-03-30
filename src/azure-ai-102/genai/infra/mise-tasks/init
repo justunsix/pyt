@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-#MISE description="Initialize Terraform project"
-
-# Initilize the terraform project
-terraform init
-# Upgrade the terraform project
-terraform init -upgrade
