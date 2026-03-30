@@ -21,36 +21,36 @@ run = [
 [tasks.tf-init]
 description = "Initialize Terraform"
 run = [
-  'cd infra',
   'terraform init',
   'terraform init -upgrade',
 ]
+dir = "infra"
 
 [tasks.tf-apply]
 description = "Apply infrastructure configuration"
 depends = ['build']
 run = [
-  'cd infra',
   'terraform apply tfplan',
 ]
+dir = "infra"
 
 [tasks.tf-state]
 description = "See state file and resources"
 run = [
-  'cd infra',
   'terraform state list',
 ]
+dir = "infra"
 
 [tasks.tf-show]
 description = "See state"
 run = [
-  'cd infra',
   'terraform show',
 ]
+dir = "infra"
 
 [tasks.tf-destroy]
 description = "Destroy infrastructure"
 run = [
-  'cd infra',
   'terraform destroy',
 ]
+dir = "infra"
