@@ -35,4 +35,4 @@ run = ['terraform -chdir=infra show']
 
 [tasks."terraform:destroy"]
 description = "Destroy infrastructure"
-run = ['terraform =chdir=infra destroy']
+run = ['terraform -chdir=infra destroy']
