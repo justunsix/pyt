@@ -33,3 +33,27 @@ variable "tags" {
   default     = {}
 }
 
+variable "create_ai_foundry" {
+  description = "Create AI Foundry cognitive account"
+  type        = bool
+  default     = false
+}
+
+variable "create_project" {
+  description = "Create Foundry project"
+  type        = bool
+  default     = false
+}
+
+variable "create_model_deployment" {
+  description = "Deploy a model to AI Foundry"
+  type        = bool
+  default     = false
+}
+
+variable "create_storage_account" {
+  description = "Create a storage account"
+  type        = bool
+  default     = false
+}
+
