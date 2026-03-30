@@ -22,16 +22,16 @@
 		"ms-python.black-formatter",
 		"wholroyd.jinja",
 		"ms-python.python",
-		"donjayamanne.python-environment-manager",
 		"donjayamanne.python-extension-pack",
 		// -- docstring generator
-		"njpwerner.autodocstring",
 		"ms-python.vscode-pylance",
 		// data science
 		"ms-toolsai.datawrangler",
 		"mechatroner.rainbow-csv",
 		"janisdd.vscode-edit-csv",
-		"grapecity.gc-excelviewer"
+		"ms-windows-ai-studio.windows-ai-studio",
+		"ms-azuretools.vscode-azure-mcp-server",
+		"ms-azuretools.vscode-azureresourcegroups"
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": []
