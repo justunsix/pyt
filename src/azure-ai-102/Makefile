@@ -12,6 +12,7 @@ help: ## Show this help
 	# Copy updated lab files to running directory
 	cp -f chat-app/* mslearn-ai-foundry/labfiles/chat-app/python/
 	cp -f rag-app/* mslearn-ai-foundry/labfiles/rag-app/python/
+	cp -f foundry-chat/* mslearn-ai-foundry/labfiles/foundry-chat/python/chat-app/
 	cd mslearn-ai-foundry
 	rm -rf .git
 
