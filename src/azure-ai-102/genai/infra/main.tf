@@ -49,14 +49,14 @@ resource "azurerm_cognitive_account_project" "project_primary" {
   }
 }
 
-## Create a deployment for OpenAI's GPT-4o in the AI Foundry resource
+## Create a model deployment in the AI Foundry resource
 ##
-resource "azurerm_cognitive_deployment" "aifoundry_deployment_gpt_4_1" {
+resource "azurerm_cognitive_deployment" "aifoundry_deployment_model" {
   depends_on = [
     azurerm_cognitive_account.ai_foundry
   ]
 
-  name                 = "gpt-4.1"
+  name                 = var.model_name
   cognitive_account_id = azurerm_cognitive_account.ai_foundry.id
 
   sku {
@@ -66,7 +66,7 @@ resource "azurerm_cognitive_deployment" "aifoundry_deployment_gpt_4_1" {
 
   model {
     format  = "OpenAI"
-    name    = "gpt-4.1"
+    name    = var.model_name
     version = var.model_version
   }
 }

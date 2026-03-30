@@ -19,6 +19,6 @@ output "project_id" {
 }
 
 output "deployment_id" {
-  description = "ID of the GPT-4.1 deployment"
-  value       = azurerm_cognitive_deployment.gpt_4_1.id
+  description = "ID of the model deployment"
+  value       = azurerm_cognitive_deployment.aifoundry_deployment_model.id
 }

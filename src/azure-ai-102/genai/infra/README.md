@@ -15,7 +15,7 @@ Recommended region by AI Foundry: `EastUS`, fine tuning lab may require
 
 ### Other Optional resources
 
-- Microsoft Foundry, deployed model `gpt-4-1`
+- Microsoft Foundry, deployed model `gpt-4.1`
 
 ## Usage
 
@@ -33,3 +33,4 @@ files.
 - [Azure AI Foundry - Azure Terraform Quickstart - GitHub](https://github.com/Azure/terraform/tree/master/quickstart/101-azure-ai-foundry)
 - [Use Terraform to create Azure AI Foundry resource](https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/create-resource-terraform)
 - [Azure OpenAI - Terraform Registry](https://registry.terraform.io/modules/Azure/openai/azurerm/latest?tab=resources)
+

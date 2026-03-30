@@ -15,8 +15,14 @@ variable "environment" {
   default     = "dev"
 }
 
+variable "model_name" {
+  description = "Name of the model to deploy"
+  type        = string
+  default     = "gpt-4.1"
+}
+
 variable "model_version" {
-  description = "Version of the GPT-4.1 model to deploy"
+  description = "Version of the model to deploy"
   type        = string
   default     = "2025-04-14"
 }
