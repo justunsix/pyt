@@ -3,7 +3,6 @@
 # Source:
 # https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-cli
 # https://learn.microsoft.com/en-us/azure/storage/blobs/blob-containers-cli
-
 random_number=$(awk "BEGIN{srand(); print int(rand()*(700000-100000+1))+100000}")
 
 LOCATION="canadacentral"
@@ -18,9 +17,10 @@ delete_rg() {
   az group delete --name "$1"
 }
 
+# Create resource group and storage account (SA) inside it
+# Set up a container in SA
 create_rg_and_storage() {
 
-  # Create resource group and storage account inside it
   az group create --name "$RESOURCE_GROUP_NAME" --location $LOCATION
   az storage account create \
     --name "$STORAGE_ACCOUNT_NAME" \
@@ -43,9 +43,9 @@ create_rg_and_storage() {
 
 }
 
+# Set contributor (read/write) role assignment for curent user
 set_role_for_storage() {
 
-  # Set role assignment for curent user
   az role assignment create \
     --role $SA_BLOB_CONTRIBUTOR_ROLE_DEFINITION_ID \
     --assignee "$(az ad signed-in-user show --query id -o tsv)" \

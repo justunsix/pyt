@@ -17,6 +17,10 @@ run = [
   'terraform -chdir=infra plan -out=tfplan',
 ]
 
+[tasks."terraform:pre-init"]
+description = "Set up Azure Storage Account for Terraform Backend"
+run = './infra/tf-backend-setup.sh'
+
 [tasks."terraform:init"]
 description = "Initialize Terraform"
 run = ['terraform -chdir=infra init', 'terraform -chdir=infra init -upgrade']
