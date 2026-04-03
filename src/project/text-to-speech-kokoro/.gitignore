@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+uv.lock
+
+# Kokoro-TTS
+voices*
+kokoro-*
+
+# Input and Outputs
+*.txt
+*.org
+*.md
+*.wav
+*.mp3
