@@ -21,6 +21,7 @@ updates:
       - "/src/project/spreadsheet"
       - "/src/project/spreadsheet/google-ads-report"
       - "/src/project/spreadsheet/text-to-speech"
+      - "/src/project/ytdlp-env"
     schedule:
       interval: "monthly"
     labels:
@@ -40,4 +41,3 @@ updates:
       - "terraform"
     commit-message:
       prefix: "deps"
-
