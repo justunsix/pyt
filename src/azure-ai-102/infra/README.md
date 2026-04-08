@@ -1,6 +1,6 @@
-# Infrastructure as Code for Develop Artificial Intelligence (AI) solutions in Azure AI-102 Labs
+# Infrastructure for Artificial Intelligence (AI) Azure solutions
 
-Create infrastructure for the Azure AI-102 lab groups using Terraform.
+Create infrastructure as code (IAC) for the Azure AI-102 lab groups using Terraform.
 
 ## Infrastructure Requirements
 
@@ -43,6 +43,9 @@ Azure Content Understanding.
 3. [Develop AI Language and Speech solutions on Azure](https://microsoftlearning.github.io/mslearn-ai-language/)
 4. [Develop computer vision solutions in Azure](https://microsoftlearning.github.io/mslearn-ai-vision/)
 5. [Develop AI-powered information extraction solutions in Azure](https://microsoftlearning.github.io/mslearn-ai-information-extraction/)
+
+Links include lab instructions which may
+change has Azure AI services are updated.
 
 ## Usage
 
