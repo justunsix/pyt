@@ -8,6 +8,7 @@ run = [
   'az login',
   'az account set --subscription "$TF_VAR_subscription_id"',
 ]
+shell = 'bash -c'
 
 [tasks."terraform:fmt-validate-plan"]
 description = "Format and Validate Terraform files and Plan"
