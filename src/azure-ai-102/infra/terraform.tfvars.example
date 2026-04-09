@@ -2,10 +2,10 @@ location = "eastus2"
 
 ## Toggle resources on/off for each lab phase
 ## Set to true to create, false to destroy
-create_ai_foundry       = true
-create_project          = true
-create_storage_account  = false
-create_chat_model_deployment  = true
+create_ai_foundry             = true
+create_project                = true
+create_storage_account        = false
+create_chat_model_deployment  = false
 create_image_model_deployment = false
 create_video_model_deployment = false
 create_ai_language            = false

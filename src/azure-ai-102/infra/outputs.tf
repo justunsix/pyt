@@ -18,8 +18,8 @@ output "project_id" {
   value       = try(azurerm_cognitive_account_project.project_primary[0].id, null)
 }
 
-output "deployment_id" {
-  description = "ID of the model deployment"
+output "chat_model_deployment_id" {
+  description = "ID of the chat model deployment"
   value       = try(azurerm_cognitive_deployment.chat_model[0].id, null)
 }
 
