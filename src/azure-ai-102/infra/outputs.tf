@@ -18,6 +18,11 @@ output "project_id" {
   value       = try(azurerm_cognitive_account_project.project_primary[0].id, null)
 }
 
+output "project_endpoints" {
+  description = "Endpoints of the Foundry project"
+  value       = try(azurerm_cognitive_account_project.project_primary[0].endpoints, null)
+}
+
 output "chat_model_deployment_id" {
   description = "ID of the chat model deployment"
   value       = try(azurerm_cognitive_deployment.chat_model[0].id, null)
