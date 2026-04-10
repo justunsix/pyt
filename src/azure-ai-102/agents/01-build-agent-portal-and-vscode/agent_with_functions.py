@@ -101,9 +101,9 @@ def main():
                             filepath = save_image(item.image.data, filename)
                             print(f"\n[Agent generated a chart - saved to: {filepath}]")
                         else:
-                            print(f"\n[Agent generated an image]")
+                            print("\n[Agent generated an image]")
                     elif item.type == "file":
-                        print(f"\n[Agent created a file]")
+                        print("\n[Agent created a file]")
 
         # Check for files in the response and download them
         file_id = ""

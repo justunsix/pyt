@@ -57,6 +57,7 @@ Login-Notification:
 	git clone https://github.com/MicrosoftLearning/mslearn-ai-agents ai-agents
 	cp -f 01-build-agent-portal-and-vscode/* ai-agents/Labfiles/01-build-agent-portal-and-vscode/Python
 	cp -f 02-build-ai-agent/* ai-agents/Labfiles/02-build-ai-agent/Python/
+	cp -f 02-agent-custom-tools/* ai-agents/Labfiles/02-agent-custom-tools/Python
 	cd ai-agents
 	rm -rf .git
 
@@ -64,6 +65,11 @@ Login-Notification:
 	az login
 	cd ./agents/ai-agents/Labfiles/01-build-agent-portal-and-vscode/Python
 	uv run agent_with_functions.py
+
+04a-agents-custom-tools: Login-Notification ## Run agents with custom tools
+	az login
+	cd ./agents/02-agent-custom-tools/
+	uv run agent.py
 
 04a-agents-develop-ai-agent-run: Login-Notification ## Login and Run agent with Code interpreter and threads
 	az login
