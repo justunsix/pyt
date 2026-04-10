@@ -55,9 +55,10 @@ Login-Notification:
 	cd agents || exit
 	rm -r ai-agents -f
 	git clone https://github.com/MicrosoftLearning/mslearn-ai-agents ai-agents
-	cp -f 01-build-agent-portal-and-vscode/* ai-agents/Labfiles/01-build-agent-portal-and-vscode/Python
+	cp -f 01-build-agent-portal-and-vscode/* ai-agents/Labfiles/01-build-agent-portal-and-vscode/Python/
 	cp -f 02-build-ai-agent/* ai-agents/Labfiles/02-build-ai-agent/Python/
-	cp -f 02-agent-custom-tools/* ai-agents/Labfiles/02-agent-custom-tools/Python
+	cp -f 02-agent-custom-tools/* ai-agents/Labfiles/02-agent-custom-tools/Python/
+	cp -f 02-mcp-integration/* ai-agents/Labfiles/03-mcp-integration/Python/
 	cd ai-agents
 	rm -rf .git
 
@@ -80,6 +81,11 @@ Login-Notification:
 	az login
 	cd ./agents/ai-agents/Labfiles/03b-build-multi-agent-solution/Python
 	uv run agent_triage.py
+
+04b-agents-mcp-integration: Login-Notification ## Run agent with MCP server
+	az login
+	cd .agents/ai-agents/Labfiles/02-agent-custom-tools/Python
+	uv run client.py
 
 05-language-init: ## Initialize language files from external repo
 	cd language || exit
