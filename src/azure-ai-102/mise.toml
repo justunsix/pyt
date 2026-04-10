@@ -38,6 +38,10 @@ run = ['terraform -chdir=infra state list']
 description = "See state"
 run = ['terraform -chdir=infra show']
 
+[tasks."terraform:output"]
+description = "Show outputs"
+run = ['terraform -chdir=infra output']
+
 [tasks."terraform:destroy"]
 description = "Destroy infrastructure"
 run = ['terraform -chdir=infra destroy']
