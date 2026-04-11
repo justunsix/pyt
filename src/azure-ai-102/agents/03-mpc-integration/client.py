@@ -1,23 +1,24 @@
-import os
 import asyncio
 import json
-from dotenv import load_dotenv
+import os
 from contextlib import AsyncExitStack
+from subprocess import call
+
 from azure.ai.projects import AIProjectClient
-from azure.ai.projects.models import FunctionTool
+from azure.ai.projects.models import FunctionTool, PromptAgentDefinition
 from azure.identity import DefaultAzureCredential
-from azure.ai.projects.models import PromptAgentDefinition, FunctionTool
+from dotenv import load_dotenv
+
+# Add references
+from mcp import ClientSession, StdioServerParameters
+from mcp.client.stdio import stdio_client
 from openai.types.responses.response_input_param import (
     FunctionCallOutput,
     ResponseInputParam,
 )
 
-# Add references
-from mcp import ClientSession, StdioServerParameters
-from mcp.client.stdio import stdio_client
-
 # Clear the console
-os.system("cls" if os.name == "nt" else "clear")
+_ = call("clear" if os.name == "posix" else "cls")
 
 # Load environment variables from .env file
 load_dotenv()
@@ -190,4 +191,3 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-
