@@ -5,7 +5,8 @@ location = "eastus2"
 create_ai_foundry             = true
 create_project                = true
 create_storage_account        = false
-create_chat_model_deployment  = false
+## Enable chat model deployment, used by most labs
+create_chat_model_deployment  = true
 create_image_model_deployment = false
 create_video_model_deployment = false
 create_ai_language            = false
