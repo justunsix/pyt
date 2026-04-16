@@ -6,7 +6,7 @@ help: ## Show this help
 init: ## Initialize environment
 	# https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file
 	# as of 2026-04-02
-	uv venv --python 3.11.14
+	uv venv
 	uv add yt-dlp
 	# Requirements
 	### ffmpeg, ffprobe
@@ -28,11 +28,14 @@ init: ## Initialize environment
 	# Metadata
 	### thumbnail
 	uv add mutagen
-    ### AtomicParsley
-    ### xattr metadata
+	### AtomicParsley
+	### xattr metadata
 	uv add xattr
-    # Other
-    ### Decryption of streams
+	# Other
+	### Decryption of streams
 	uv add pycryptodome
-    # Downloader (optional)
+	# Downloader (optional)
 	### aria
+
+view-video: ## View video
+	./view-video.sh
