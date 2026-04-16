@@ -16,6 +16,9 @@ def main():
         load_dotenv()
         foundry_endpoint = os.getenv("FOUNDRY_ENDPOINT")
 
+        # Validate required environment variables
+        if not foundry_endpoint:
+            raise ValueError("FOUNDRY_ENDPOINT environment variable is not set.")
         # Create client using endpoint
         credential = DefaultAzureCredential()
         ai_client = TextAnalyticsClient(
