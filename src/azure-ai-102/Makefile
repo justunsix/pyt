@@ -94,6 +94,8 @@ Login-Notification:
 	cp -f 01-analyze-text/* mslearn-ai-language/Labfiles/01-analyze-text/Python/text-analysis/
 	cp -f 02-qna/* mslearn-ai-language/Labfiles/02-qna/Python/qna-app
 	cp -f 02-language-agent/* mslearn-ai-language/Labfiles/02-language-agent/Python/text-agent
+	cp -f 03-genai-speech-transcribe-generate/* mslearn-ai-language/Labfiles/03-gen-ai-speech/Python/generate-speech
+	cp -f 03-genai-speech-transcribe-generate/* mslearn-ai-language/Labfiles/03-gen-ai-speech/Python/transcribe-speech
 	cp -f 04-text-classification/* mslearn-ai-language/Labfiles/04-text-classifications/Python/classify-text
 	cp -f 09-audio-chat/* mslearn-ai-language/Labfiles/09-audio-chat/Python/
 	cd mslearn-ai-language
