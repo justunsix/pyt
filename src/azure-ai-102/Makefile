@@ -97,6 +97,7 @@ Login-Notification:
 	cp -f 03-genai-speech-transcribe-generate/* mslearn-ai-language/Labfiles/03-gen-ai-speech/Python/generate-speech
 	cp -f 03-genai-speech-transcribe-generate/* mslearn-ai-language/Labfiles/03-gen-ai-speech/Python/transcribe-speech
 	cp -f 04-text-classification/* mslearn-ai-language/Labfiles/04-text-classifications/Python/classify-text
+	cp -f 07-translation/* mslearn-ai-language/Labfiles/07-translation/Python/translators
 	cp -f 09-audio-chat/* mslearn-ai-language/Labfiles/09-audio-chat/Python/
 	cd mslearn-ai-language
 	rm -rf .git
