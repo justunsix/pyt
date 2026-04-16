@@ -27,9 +27,9 @@ model_deployment = os.getenv("MODEL_DEPLOYMENT_NAME")
 
 # Validate required environment variables
 if not project_endpoint:
-    raise ValueError("AZURE_OPENAI_ENDPOINT environment variable is not set.")
+    raise ValueError("PROJECT_ENDPOINT environment variable is not set.")
 if not model_deployment:
-    raise ValueError("MODEL_DEPLOYMENT environment variable is not set.")
+    raise ValueError("MODEL_DEPLOYMENT_NAME environment variable is not set.")
 
 
 async def connect_to_server(exit_stack: AsyncExitStack):
