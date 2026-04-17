@@ -167,6 +167,7 @@ Login-Notification:
 	git clone https://github.com/microsoftlearning/mslearn-ai-information-extraction mslearn-ai-info
 	cp -f prebuilt-doc-intelligence/* mslearn-ai-info/Labfiles/prebuilt-doc-intelligence/Python/
 	cp -f knowledge/* mslearn-ai-info/Labfiles/knowledge/python/
+	cp -f 02-content-understanding-api/* mslearn-ai-info/Labfiles/02-content-understanding-api/
 	cd mslearn-ai-info || exit
 	rm -rf .git
 
