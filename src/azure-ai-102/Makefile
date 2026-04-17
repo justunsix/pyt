@@ -168,6 +168,9 @@ Login-Notification:
 	cp -f prebuilt-doc-intelligence/* mslearn-ai-info/Labfiles/prebuilt-doc-intelligence/Python/
 	cp -f knowledge/* mslearn-ai-info/Labfiles/knowledge/python/
 	cp -f 02-content-understanding-api/* mslearn-ai-info/Labfiles/02-content-understanding-api/
+	cp -f 03-document-intelligence/prebuilt/* mslearn-ai-info/Labfiles/03-document-intelligence/prebuilt/Python/
+	cp -f 03-document-intelligence/custom/* mslearn-ai-info/Labfiles/03-document-intelligence/custom/Python/
+	cp -f 04-knowledge-mining/* mslearn-ai-info/Labfiles/04-knowledge-mining/
 	cd mslearn-ai-info || exit
 	rm -rf .git
 

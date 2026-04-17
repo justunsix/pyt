@@ -140,7 +140,7 @@ resource "azurerm_cognitive_account" "ai_language" {
   location            = var.location
   resource_group_name = azurerm_resource_group.rg.name
   kind                = "TextAnalytics"
-  sku_name            = "S"
+  sku_name            = "F0"
 
   tags = merge(var.tags, {
     Environment = var.environment
@@ -165,7 +165,7 @@ resource "azurerm_search_service" "ai_search" {
   name                = "aisearch${random_string.unique.result}"
   resource_group_name = azurerm_resource_group.rg.name
   location            = var.location
-  sku                 = "basic"
+  sku                 = "free"
 }
 
 resource "azurerm_cognitive_account" "document_intelligence" {
@@ -174,7 +174,7 @@ resource "azurerm_cognitive_account" "document_intelligence" {
   location            = var.location
   resource_group_name = azurerm_resource_group.rg.name
   kind                = "FormRecognizer"
-  sku_name            = "S0"
+  sku_name            = "F0"
 
   tags = merge(var.tags, {
     Environment = var.environment
