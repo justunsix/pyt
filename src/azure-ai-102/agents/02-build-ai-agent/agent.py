@@ -1,27 +1,31 @@
 import os
-from dotenv import load_dotenv
-from typing import Any
 from pathlib import Path
 
-# Add references
-from azure.identity import DefaultAzureCredential
 from azure.ai.agents import AgentsClient
 from azure.ai.agents.models import (
-    FilePurpose,
     CodeInterpreterTool,
+    FilePurpose,
     ListSortOrder,
     MessageRole,
 )
 
+# Add references
+from azure.identity import DefaultAzureCredential
+from dotenv import load_dotenv
+
 
 def main():
-    # Clear the console
-    os.system("cls" if os.name == "nt" else "clear")
 
     # Load environment variables from .env file
     load_dotenv()
     project_endpoint = os.getenv("PROJECT_ENDPOINT")
     model_deployment = os.getenv("MODEL_DEPLOYMENT_NAME")
+
+    # Validate required environment variables
+    if not project_endpoint:
+        raise ValueError("PROJECT_ENDPOINT environment variable is not set.")
+    if not model_deployment:
+        raise ValueError("MODEL_DEPLOYMENT_NAME environment variable is not set.")
 
     # Display the data to be analyzed
     script_dir = Path(__file__).parent  # Get the directory of the script
