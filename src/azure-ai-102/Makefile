@@ -59,6 +59,8 @@ Login-Notification:
 	cp -f 02-build-ai-agent/* ai-agents/Labfiles/02-build-ai-agent/Python/
 	cp -f 02-agent-custom-tools/* ai-agents/Labfiles/02-agent-custom-tools/Python/
 	cp -f 02-mcp-integration/* ai-agents/Labfiles/03-mcp-integration/Python/
+	cp -f 05-agent-orchestration/* ai-agents/Labfiles/05-agent-orchestration/Python/
+	cp -f 07-agent-framework/* ai-agents/Labfiles/07-agent-framework/Python/
 	cd ai-agents
 	rm -rf .git
 
