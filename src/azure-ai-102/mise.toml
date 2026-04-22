@@ -28,7 +28,7 @@ run = ['terraform -chdir=infra init', 'terraform -chdir=infra init -upgrade']
 
 [tasks."terraform:apply"]
 description = "Apply infrastructure configuration"
-run = ['terraform -chdir=infra apply tfplan']
+run = ['terraform -chdir=infra apply -auto-approve tfplan']
 
 [tasks."terraform:state"]
 description = "See state file and resources"
@@ -44,4 +44,4 @@ run = ['terraform -chdir=infra output']
 
 [tasks."terraform:destroy"]
 description = "Destroy infrastructure"
-run = ['terraform -chdir=infra destroy']
+run = ['terraform -chdir=infra destroy -auto-approve']
