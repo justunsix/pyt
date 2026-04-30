@@ -45,3 +45,6 @@ run = ['terraform -chdir=infra output']
 [tasks."terraform:destroy"]
 description = "Destroy infrastructure"
 run = ['terraform -chdir=infra destroy -auto-approve']
+
+[tools]
+azure = { version = "latest", uvx_args = "--prerelease=allow" }
