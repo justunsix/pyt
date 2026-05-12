@@ -1,0 +1,17 @@
+[project]
+name = "pyt"
+version = "1.0.0"
+description = "Python Tests (pyt)"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+
+# https://docs.astral.sh/uv/concepts/projects/config/#project-packaging
+# force a project package not to be built and installed into the project environment
+[tool.uv]
+package = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+# include = ["mymodule"]
+exclude = ["tests*", "*"]
