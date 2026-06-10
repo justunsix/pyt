@@ -39,3 +39,6 @@ init: ## Initialize environment
 
 view-video: ## View video
 	./view-video.sh
+
+download-video: ## Download URL video from clipboard
+	uv run yt-dlp $$(xsel -ob)
