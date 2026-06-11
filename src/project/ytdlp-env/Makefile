@@ -41,4 +41,4 @@ view-video: ## View video
 	./view-video.sh
 
 download-video: ## Download URL video from clipboard
-	uv run yt-dlp -o "%(uploader)s-%(title)s.%(ext)s" -f "bestvideo[height<=1080]" $$(xsel -ob)
+	uv run yt-dlp -o "~/Downloads/%(uploader)s-%(title)s.%(ext)s" -f "bestvideo[height<=1080]+bestaudio" $$(xsel -ob)
