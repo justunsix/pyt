@@ -5,9 +5,8 @@
 ---
 
 This guide is for code generation, testing, linting, and maintenance by agentic
-systems and developer agents working within `pyt`.
-It has whole codebase and per project rules for command usage, code style,
-structure, and best practices.
+systems and developer agents working within `pyt`. It has whole codebase and per
+project rules for command usage, code style, structure, and best practices.
 
 ---
 
@@ -15,13 +14,12 @@ structure, and best practices.
 
 ### Python Environment
 
-- Python version: **3.12+ recommended**, see individual `pyproject.toml` or
+- Python version: **3.14+ recommended**, see individual `pyproject.toml` or
   `requirements.txt` for dependencies.
 - Projects are in subfolders. If `pyproject.toml` is present use `uv run` to
-  both install dependencies and run programs.
-  Alternatively, activate a virtual environment and install
-  the appropriate `requirements.txt` or `pyproject.toml` as needed
-  or simply use `uv run`. Example:
+  both install dependencies and run programs. Alternatively, activate a virtual
+  environment and install the appropriate `requirements.txt` or `pyproject.toml`
+  as needed or simply use `uv run`. Example:
 
 ### Other Tools
 
@@ -57,19 +55,19 @@ See each sub-project's `README.md` for required environment variables (`.env`).
 
 ### Linting and Formatting
 
-Format with `black` and lint with `ruff`. Run from repo root or sub-project dir:
+Format and lint with `ruff`. Run from repo root or sub-project dir:
 
 ```sh
-black .    # auto-format Python files
-ruff .     # lint (default rules)
+ruff check .      # lint and check issues
+ruff format .     # format
 ```
 
 No project-global config exists for these tools; they use defaults.
 
 ### Testing
 
-There is **no test infrastructure** in this repository. No `test_*.py` files,
-no `pytest.ini`, no `conftest.py`, no test dependencies.
+There is **no test infrastructure** in this repository. No `test_*.py` files, no
+`pytest.ini`, no `conftest.py`, no test dependencies.
 
 When adding tests, follow these conventions:
 
@@ -113,7 +111,8 @@ Use absolute imports when possible. Avoid wildcard imports (`from x import *`).
 - `snake_case` for variables, functions, and module filenames.
 - `PascalCase` for class names.
 - `UPPER_SNAKE_CASE` for constants and script-level configuration.
-- Avoid single-character names except for loop indexes and simple comprehensions.
+- Avoid single-character names except for loop indexes and simple
+  comprehensions.
 
 ### Typing and Function Signatures
 
@@ -128,8 +127,8 @@ possible. Use `None` sentinel pattern for optional args with `Optional[T]`.
 
 ### Docstrings and Comments
 
-Use triple-quoted docstrings for all public functions and classes.
-Default to reStructuredText style (PEP 287):
+Use triple-quoted docstrings for all public functions and classes. Default to
+reStructuredText style (PEP 287):
 
 ```python
 def check_csv_encoding(csv_file: str) -> None:
@@ -180,8 +179,8 @@ if __name__ == "__main__":
 ### Project Structure
 
 - Code is organized under `src/` by domain:
-  - `src/project/` -- general-purpose Python projects (CSV, data science,
-    web automation, AI/LLM tools, etc.)
+  - `src/project/` -- general-purpose Python projects (CSV, data science, web
+    automation, AI/LLM tools, etc.)
   - `src/azure-ai-102/` -- Azure AI-102 certification study code
   - `src/azure-dp-100/` -- Azure DP-100 certification study code
   - `src/learn/` -- learning notes and small exercises
