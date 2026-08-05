@@ -42,5 +42,9 @@ view-video: ## View video
 
 download-video: ## Download URL video from clipboard
 	uv run yt-dlp -o "~/Downloads/%(uploader)s-%(title)s.%(ext)s" -f "bestvideo[height<=1080]+bestaudio" $$(xsel -ob)
+
 download-video-720: ## Download URL video from clipboard at most 720p resolution
 	uv run yt-dlp -o "~/Downloads/%(uploader)s-%(title)s.%(ext)s" -f "bestvideo[height<=720]+bestaudio" $$(xsel -ob)
+
+download-video-720-list: ## Download URL video from clipboard at most 720p resolution
+	uv run yt-dlp -o "~/Downloads/%(uploader)s-%(title)s.%(ext)s" -f "bestvideo[height<=720]+bestaudio" -a urls.txt --download-archive archive.txt
