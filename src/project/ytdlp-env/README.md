@@ -11,10 +11,10 @@ installed on the system:
 
 - uv - for environment setup
 - ffmpeg and ffprobe
-- node
+- node and/or deno
 - AtomicParsley
-- Downloader of your choice, for example aria
-- mpv (optional)
+- Downloader of your choice, for example aria2
+- mpv (optional for viewing media)
 
 ## Usage
 
